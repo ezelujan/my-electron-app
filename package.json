@@ -1,14 +1,36 @@
 {
   "name": "ezemarkapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ezequiel Markdown App",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "biild": {
+    "appId": "ezemarkappv1",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   },
   "devDependencies": {
     "electron": "^23.1.2",
+    "electron-builder": "^23.6.0",
     "standard": "^17.0.0"
   },
   "eslintConfig": {
